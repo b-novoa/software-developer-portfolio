@@ -1,0 +1,94 @@
+
+import { motion, useReducedMotion } from 'motion/react'
+import ContactForm from '../components/contact/ContactForm'
+
+function Contact() {
+  const shouldReduceMotion = useReducedMotion()
+
+  return (
+    <motion.section
+      initial={{
+        opacity: 0,
+        y: shouldReduceMotion ? 0 : 25,
+      }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: shouldReduceMotion ? 0 : 0.6,
+      }}
+    >
+      <p className="mb-5 text-sm font-medium tracking-widest text-[#A2FFCB]">
+        01 / CONTACT
+      </p>
+
+      <h1 className="text-4xl font-bold text-white md:text-6xl">
+        Let's build something{' '}
+        <span className="text-[#A2FFCB]">great.</span>
+      </h1>
+
+      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
+        Have an opportunity, an interesting project
+        or just want to talk about software?
+        I'd love to hear from you.
+      </p>
+
+      <div className="mt-12 grid gap-10 lg:grid-cols-2">
+        {/* Información de contacto */}
+        <div className="space-y-8">
+          <div className="rounded-2xl border border-slate-800 bg-[#172234] p-6">
+            <h2 className="text-xl font-semibold text-white">
+              Get in touch
+            </h2>
+
+            <p className="mt-4 text-slate-400">
+              The easiest way to reach me is by email.
+            </p>
+
+            <a
+              href="mailto:brayannoga@gmail.com"
+              className="mt-5 inline-block break-all text-[#A2FFCB] hover:underline"
+            >
+              brayannoga@gmail.com
+            </a>
+          </div>
+
+          <div className="rounded-2xl border border-slate-800 bg-[#172234] p-6">
+            <h2 className="text-xl font-semibold text-white">
+              Professional profiles
+            </h2>
+
+            <div className="mt-5 flex flex-wrap gap-5">
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-300 hover:text-[#A2FFCB]"
+              >
+                GitHub ↗
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/brayan-novoa-gamboa-794331160"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-300 hover:text-[#A2FFCB]"
+              >
+                LinkedIn ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Formulario */}
+        <div className="rounded-2xl border border-slate-800 bg-[#172234] p-6 md:p-8">
+          <h2 className="mb-6 text-xl font-semibold text-white">
+            Send a message
+          </h2>
+
+          <ContactForm />
+        </div>
+      </div>
+    </motion.section>
+  )
+}
+
+export default Contact

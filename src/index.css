@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+}
+
+body {
+    margin: 0;
+    background-color: #080D18;
+}
+
+.cosmic-background {
+    background-color: #080D18;
+
+    background-image:
+        radial-gradient(ellipse at 15% 15%,
+            rgba(79, 99, 181, 0.18),
+            transparent 35%),
+
+        radial-gradient(ellipse at 85% 20%,
+            rgba(39, 138, 127, 0.12),
+            transparent 32%),
+
+        radial-gradient(ellipse at 50% 75%,
+            rgba(41, 65, 119, 0.12),
+            transparent 40%),
+
+        radial-gradient(1px 1px at 25px 35px,
+            rgba(240, 248, 255, 0.8) 99%,
+            transparent),
+
+        radial-gradient(1px 1px at 115px 150px,
+            rgba(210, 228, 255, 0.4) 99%,
+            transparent),
+
+        radial-gradient(1px 1px at 200px 90px,
+            rgba(255, 255, 255, 0.25) 99%,
+            transparent);
+
+    background-size:
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        190px 165px,
+        250px 215px,
+        340px 290px;
+}
