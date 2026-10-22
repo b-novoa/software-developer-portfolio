@@ -31,7 +31,7 @@ function Navbar() {
                         onClick={() => setIsMenuOpen(false)}
                         className="text-xl font-bold text-[#A2FFCB]"
                     >
-                        BN.
+                        BNG.
                     </NavLink>
 
                     {/* Navegación de escritorio */}

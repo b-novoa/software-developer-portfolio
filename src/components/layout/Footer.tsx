@@ -23,7 +23,7 @@ function Footer() {
                             to="/"
                             className="text-2xl font-bold text-[#A2FFCB]"
                         >
-                            BN.
+                            BNG.
                         </Link>
 
                         <h2 className="mt-4 font-semibold text-white">

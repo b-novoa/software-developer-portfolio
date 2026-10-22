@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import { useReducedMotion } from 'motion/react'
 import { profile } from '../../data/profile'
 
-const fullName = 'Brahyan Novoa Gamboa'
-const fullRole = 'Software Developer'
+const fullName = profile.displayName
+const fullRole = profile.role
 
 function CodeIdentity() {
     const [typedCharacters, setTypedCharacters] = useState(0)
@@ -44,7 +44,7 @@ function CodeIdentity() {
         <>
             {/* Título accesible de la página */}
             <h1 className="sr-only">
-                Brahyan Novoa Gamboa — Software Engineer
+                {profile.fullName} - {profile.role}
             </h1>
 
             {/* Identidad visual animada */}
