@@ -3,6 +3,9 @@ import { Link } from 'react-router'
 import ArchitecturePanel from './ArchitecturePanel'
 import { motion, useReducedMotion } from 'motion/react'
 import CodeIdentity from './CodeIdentity'
+import { FaArrowRight } from "react-icons/fa6";
+import { LuAppWindow } from "react-icons/lu";
+import { CgMail } from "react-icons/cg";
 
 const MotionLink = motion.create(Link)
 
@@ -64,9 +67,11 @@ function Hero() {
                             stiffness: 300,
                             damping: 20,
                         }}
-                        className="rounded-lg bg-[#A2FFCB] px-6 py-3 font-medium text-[#0B101B] transition-colors duration-300 hover:bg-emerald-300"
+                        className="inline-flex items-center gap-2 rounded-lg bg-[#A2FFCB] px-6 py-3 font-medium text-[#0B101B] transition-colors duration-300 hover:bg-emerald-300"
                     >
-                        View Projects ↗
+                        <LuAppWindow size={16} aria-hidden="true" />
+                        <span>View Projects</span>
+                        <FaArrowRight size={14} aria-hidden="true"/>
                     </MotionLink>
 
                     <MotionLink
@@ -82,9 +87,11 @@ function Hero() {
                             stiffness: 300,
                             damping: 20,
                         }}
-                        className="rounded-lg border border-slate-600 px-6 py-3 font-medium text-white transition-colors duration-300 hover:border-[#A2FFCB] hover:text-[#A2FFCB]"
+                        className="inline-flex items-center gap-3 rounded-lg border border-slate-600 px-6 py-3 font-medium text-white transition-colors duration-300 hover:border-[#A2FFCB] hover:text-[#A2FFCB]"
                     >
-                        Contact Me →
+                        <CgMail size={17} aria-hidden="true" />
+                        <span>Contact Me</span>
+                        <FaArrowRight size={14} aria-hidden="true"/>
                     </MotionLink>
                 </div>
 
