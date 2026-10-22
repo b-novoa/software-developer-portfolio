@@ -1,6 +1,7 @@
 
 import { useState, type FormEvent } from 'react'
 import { profile } from '../../data/profile'
+import { ArrowUpRight } from 'lucide-react'
 
 function ContactForm() {
     const [name, setName] = useState('')
@@ -114,12 +115,15 @@ function ContactForm() {
                 </p>
             )}
 
+
             <button
                 type="submit"
-                className="w-full cursor-pointer rounded-lg bg-[#A2FFCB] px-6 py-3 font-semibold text-[#0B101B] transition-colors hover:bg-emerald-300"
+                className="inline-flex w-full items-center justify-center gap-2 cursor-pointer rounded-lg bg-[#A2FFCB] px-6 py-3 font-semibold text-[#0B101B] transition-colors hover:bg-emerald-300"
             >
-                Prepare Email →
+                <span>Prepare Mail</span>
+                <ArrowUpRight size={15} aria-hidden="true" />
             </button>
+
 
             <p className="text-xs text-slate-400">
                 This will open your email application to send the message.
