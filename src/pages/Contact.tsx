@@ -2,6 +2,8 @@
 import { motion, useReducedMotion } from 'motion/react'
 import ContactForm from '../components/contact/ContactForm'
 import { profile } from '../data/profile'
+import { ArrowUpRight } from 'lucide-react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa6'
 
 function Contact() {
   const shouldReduceMotion = useReducedMotion()
@@ -62,18 +64,22 @@ function Contact() {
                 href={profile.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-300 hover:text-[#A2FFCB]"
+                className="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-[#A2FFCB]"
               >
-                GitHub ↗
+                <FaGithub size={22} aria-hidden="true" />
+                <span>GitHub</span>
+                <ArrowUpRight size={15} aria-hidden="true" />
               </a>
 
               <a
                 href={profile.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-300 hover:text-[#A2FFCB]"
+                className="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-[#A2FFCB]"
               >
-                LinkedIn ↗
+                <FaLinkedin size={22} aria-hidden="true" />
+                <span>LinkedIn</span>
+                <ArrowUpRight size={15} aria-hidden="true" />
               </a>
             </div>
           </div>
