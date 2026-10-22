@@ -1,7 +1,6 @@
 
 import { useState, type FormEvent } from 'react'
-
-const CONTACT_EMAIL = 'brayannoga@gmail.com'
+import { profile } from '../../data/profile'
 
 function ContactForm() {
     const [name, setName] = useState('')
@@ -37,7 +36,7 @@ function ContactForm() {
         )
 
         window.location.href =
-            `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
+            `mailto:${profile.email}?subject=${subject}&body=${body}`
     }
 
 

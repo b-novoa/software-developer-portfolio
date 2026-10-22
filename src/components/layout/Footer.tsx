@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router'
+import { profile } from '../../data/profile'
 
 const navigation = [
     { label: 'Home', path: '/' },
@@ -26,11 +27,11 @@ function Footer() {
                         </Link>
 
                         <h2 className="mt-4 font-semibold text-white">
-                            Brayan Novoa
+                            {profile.displayName}
                         </h2>
 
                         <p className="mt-1 text-sm text-slate-400">
-                            Software Engineer
+                            {profile.role}
                         </p>
                     </div>
 
@@ -65,19 +66,19 @@ function Footer() {
 
                         <div className="mt-4 flex gap-4">
                             <a
-                                href="https://github.com/"
+                                href={profile.githubUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-sm text-slate-400 transition-colors hover:text-[#A2FFCB]"
+                                className="text-slate-300 hover:text-[#A2FFCB]"
                             >
                                 GitHub ↗
                             </a>
 
                             <a
-                                href="https://linkedin.com/"
+                                href={profile.linkedinUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-sm text-slate-400 transition-colors hover:text-[#A2FFCB]"
+                                className="text-slate-300 hover:text-[#A2FFCB]"
                             >
                                 LinkedIn ↗
                             </a>
@@ -87,7 +88,9 @@ function Footer() {
 
                 {/* Parte inferior */}
                 <div className="mt-12 flex flex-col gap-3 border-t border-slate-800 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-                    <p>© {new Date().getFullYear()} Brayan Novoa.</p>
+                    <p className="text-slate-400">
+                        © {new Date().getFullYear()} {profile.displayName}.
+                    </p>
                     <p>Built with React & TypeScript.</p>
                 </div>
             </div>

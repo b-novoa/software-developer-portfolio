@@ -1,6 +1,7 @@
 
 import { motion, useReducedMotion } from 'motion/react'
 import ContactForm from '../components/contact/ContactForm'
+import { profile } from '../data/profile'
 
 function Contact() {
   const shouldReduceMotion = useReducedMotion()
@@ -44,10 +45,10 @@ function Contact() {
             </p>
 
             <a
-              href="mailto:brayannoga@gmail.com"
+              href={`mailto:${profile.email}`}
               className="mt-5 inline-block break-all text-[#A2FFCB] hover:underline"
             >
-              brayannoga@gmail.com
+              {profile.email}
             </a>
           </div>
 
@@ -58,7 +59,7 @@ function Contact() {
 
             <div className="mt-5 flex flex-wrap gap-5">
               <a
-                href="https://github.com/"
+                href={profile.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-300 hover:text-[#A2FFCB]"
@@ -67,7 +68,7 @@ function Contact() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/brayan-novoa-gamboa-794331160"
+                href={profile.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-300 hover:text-[#A2FFCB]"

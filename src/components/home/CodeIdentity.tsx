@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react'
 import { useReducedMotion } from 'motion/react'
+import { profile } from '../../data/profile'
 
 const fullName = 'Brahyan Novoa Gamboa'
 const fullRole = 'Software Developer'
